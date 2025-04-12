@@ -6,8 +6,8 @@ services:
     container_name: ui
     ports:
       - "8080:80"
-    depends_on:
-      - php-api
+    # depends_on:
+    #   - php-api
 
 volumes:
   db-data:
