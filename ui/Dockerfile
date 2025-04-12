@@ -5,12 +5,10 @@ FROM nginx:alpine
 RUN apk update && apk add git
 
 # Set working directory
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html/
 
 # Clone repo (replace with your repo)
-RUN git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git temp \
-    && cp -r temp/* . \
-    && rm -rf temp
+COPY frontend/ /var/www/html/ui/
 
 # Expose port 80
 EXPOSE 80
