@@ -7,7 +7,19 @@ services:
     ports:
       - "80:80"
     # depends_on:
-    #   - php-api
+    #   - fintech-api
+
+    # fintech-api:
+    #   build: ./api
+    #   container_name: fintech-api
+    #   ports:
+    #     - "80:81"
+
+    # fintech-db:
+    #   build: ./mysql
+    #   container_name: fintech-db
+    #   ports:
+    #     - "3306:3306"
 
 volumes:
   db-data:
